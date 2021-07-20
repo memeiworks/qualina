@@ -64,4 +64,34 @@
     <string name="observe_flame_blue_filter">Observe the flame through blue filter.</string>
     <string name="place_10_make_6mnaoh_add2">Place 10 drops of this solution in an evaporating dish. Make it alkaline with 6 M NaOH, then add 2 more drops.</string>
     <string name="watchglass_lp">On the underside of a watchglass, attach a wet red litmus paper then use that watchglass to cover the dish. Warm the solution but do not boil.</string>
+    <string name="text_sample_tested">Your sample was tested for the presence of other Cations.</string>
+    <string name="sample_tested_groups">Your sample was tested for the presence of Cations from other groups.</string>
+    <string name="text_no_notable_sample">There were no notable observations on your sample.</string>
+    <string name="str_return">Return</string>
+    <string name="sample_beingtested">Your sample is being tested.</string>
+    <string name="guess_your_cation">Guess your Cation</string>
+    <string name="submit">Submit</string>
+    <string name="note_you_have_3_attempts">Note: You have 3 attempts!</string>
+    <string-array name="cationslist">
+        <item>Select a Cation</item>
+        <item>Ag<small><sup>+</sup></small></item>
+        <item>Pb<small><sup>2+</sup></small></item>
+        <item>Hg<small><sub>2</sub><sup>2+</sup></small></item>
+        <item>Cr<small><sup>3+</sup></small></item>
+        <item>Mn<small><sup>4+</sup></small></item>
+        <item>Fe<small><sup>3+</sup></small></item>
+        <item>Bi<small><sup>3+</sup></small></item>
+        <item>Ba<small><sup>2+</sup></small></item>
+        <item>Co<small><sup>2+</sup></small></item>
+        <item>Ca<small><sup>2+</sup></small></item>
+        <item>Sr<small><sup>2+</sup></small></item>
+        <item>Mg<small><sup>2+</sup></small></item>
+        <item>Ni<small><sup>2+</sup></small></item>
+        <item>Cu<small><sup>2+</sup></small></item>
+        <item>Cd<small><sup>2+</sup></small></item>
+        <item>Zn<small><sup>2+</sup></small></item>
+        <item>K<small><sup>+</sup></small></item>
+        <item>Na<small><sup>+</sup></small></item>
+        <item>NH<small><sub>4</sub><sup>+</sup></small></item>
+    </string-array>
 </resources>
