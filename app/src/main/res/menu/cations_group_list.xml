@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/groupA"
+        android:title="Group A"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/groupB"
+        android:title="Group B"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/groupC"
+        android:title="Group C"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/groupD"
+        android:title="Group D"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/groupE"
+        android:title="Group E"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/Home"
+        android:title="Home"
+        app:showAsAction="never" />
+
+</menu>
