@@ -72,6 +72,8 @@
     <string name="guess_your_cation">Guess your Cation</string>
     <string name="submit">Submit</string>
     <string name="note_you_have_3_attempts">Note: You have 3 attempts!</string>
+    <string name="you_got_correct_answer">You got the correct answer!</string>
+    <string name="try_again">Try Again</string>
     <string-array name="cationslist">
         <item>Select a Cation</item>
         <item>Ag<small><sup>+</sup></small></item>

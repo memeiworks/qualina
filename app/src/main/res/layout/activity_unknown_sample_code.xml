@@ -83,7 +83,7 @@
         android:id="@+id/btnproceed"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:background="@color/purple_200"
+        android:background="@drawable/button_background"
         android:text="@string/proceed"
         android:textSize="20sp"
         android:textAllCaps="false"

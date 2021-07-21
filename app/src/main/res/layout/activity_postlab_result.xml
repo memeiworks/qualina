@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/lab_general"
-    tools:context=".CheckResultActivity">
+    tools:context=".PostlabResult">
 
     <include
         android:id="@+id/toolbar"
@@ -13,14 +13,14 @@
         android:visibility="visible"/>
 
     <TextView
-        android:id="@+id/txtresult"
+        android:id="@+id/txtcationans"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:background="@color/gray"
         android:gravity="center"
         android:padding="10dp"
-        android:text="@string/your_unknown_sample_code_is"
+        android:text="Your cation was Xx."
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,29 +29,45 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <ImageView
-        android:id="@+id/imgflask"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/general_tube"
+        android:id="@+id/imgpostlab"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/all_wrong_guess"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtresult" />
+        app:layout_constraintTop_toBottomOf="@+id/txtcationans" />
 
-    <Button
-        android:id="@+id/btnGuess"
+    <TextView
+        android:id="@+id/lblresult"
         android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="@string/guess_your_cation"
-        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:text="Note: TAKE A SCREENSHOT!"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        android:background="@drawable/button_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgflask"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNext"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgpostlab" />
 
 </android.support.constraint.ConstraintLayout>
