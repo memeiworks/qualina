@@ -48,6 +48,7 @@ public class GuessCation extends AppCompatActivity {
         this.preferences = getSharedPreferences("ScoreCation", 0);
         TextView textView = this.txtscore;
         textView.setText("SCORE: " + current_score + "/15");
+
         this.ddcations.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 GuessCation.this.answer = parent.getItemAtPosition(position).toString();

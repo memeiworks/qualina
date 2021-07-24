@@ -5,10 +5,12 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 public class Closing extends AppCompatActivity {
 
     ConstraintLayout clcredits;
+    ImageView img3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

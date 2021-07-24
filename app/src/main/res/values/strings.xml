@@ -75,25 +75,25 @@
     <string name="you_got_correct_answer">You got the correct answer!</string>
     <string name="try_again">Try Again</string>
     <string-array name="cationslist">
-        <item>Select a Cation</item>
-        <item>Ag<small><sup>+</sup></small></item>
-        <item>Pb<small><sup>2+</sup></small></item>
-        <item>Hg<small><sub>2</sub><sup>2+</sup></small></item>
-        <item>Cr<small><sup>3+</sup></small></item>
-        <item>Mn<small><sup>4+</sup></small></item>
-        <item>Fe<small><sup>3+</sup></small></item>
-        <item>Bi<small><sup>3+</sup></small></item>
-        <item>Ba<small><sup>2+</sup></small></item>
-        <item>Co<small><sup>2+</sup></small></item>
-        <item>Ca<small><sup>2+</sup></small></item>
-        <item>Sr<small><sup>2+</sup></small></item>
-        <item>Mg<small><sup>2+</sup></small></item>
-        <item>Ni<small><sup>2+</sup></small></item>
-        <item>Cu<small><sup>2+</sup></small></item>
-        <item>Cd<small><sup>2+</sup></small></item>
-        <item>Zn<small><sup>2+</sup></small></item>
-        <item>K<small><sup>+</sup></small></item>
-        <item>Na<small><sup>+</sup></small></item>
-        <item>NH<small><sub>4</sub><sup>+</sup></small></item>
+        <item><font fgcolor="#FFFFFF">Select a Cation</font></item>
+        <item><font fgcolor="#FFFFFF">Ag<small><sup>+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Pb<small><sup>2+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Hg<small><sub>2</sub><sup>2+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Cr<small><sup>3+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Mn<small><sup>4+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Fe<small><sup>3+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Bi<small><sup>3+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Ba<small><sup>2+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Co<small><sup>2+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Ca<small><sup>2+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Sr<small><sup>2+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Mg<small><sup>2+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Ni<small><sup>2+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Cu<small><sup>2+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Cd<small><sup>2+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Zn<small><sup>2+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">K<small><sup>+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">Na<small><sup>+</sup></small></font></item>
+        <item><font fgcolor="#FFFFFF">NH<small><sub>4</sub><sup>+</sup></small></font></item>
     </string-array>
 </resources>

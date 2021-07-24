@@ -27,6 +27,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="236dp"
         android:background="@color/gray"
+        android:popupBackground="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"

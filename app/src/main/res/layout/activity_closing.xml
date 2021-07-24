@@ -8,4 +8,10 @@
     android:id="@+id/clcredits"
     tools:context=".Closing">
 
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/credits"/>
+
 </android.support.constraint.ConstraintLayout>

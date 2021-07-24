@@ -188,6 +188,6 @@ public class CheckResultActivity extends AppCompatActivity {
     }
 
     public void onBackPressed() {
-        Toast.makeText(this, "Please guess your cation.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(CheckResultActivity.this, "Click RETURN button to go back to previous page.", Toast.LENGTH_SHORT).show();
     }
 }
