@@ -5,20 +5,34 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class PostlabResult extends AppCompatActivity {
+import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
+import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
+import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
+import com.shockwave.pdfium.PdfDocument;
+
+import java.util.List;
+
+public class PostlabResult extends AppCompatActivity implements OnPageChangeListener, OnLoadCompleteListener {
 
     Button btnNext;
     String cation1,cation2,cation3,cation_step,current_cation;
     int current_score;
-    ImageView imgpostlab;
+    PDFView imgpostlab;
     String player;
     TextView txtcationans,txtplayer,txtscore;
+
+    //PDF
+    public static final String SAMPLE_FILE = "file_example_PDF_1MB.pdf";
+    Integer pageNumber = 0;
+    String pdfFileName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +50,10 @@ public class PostlabResult extends AppCompatActivity {
         TextView textView = this.txtscore;
         textView.setText("SCORE: " + current_score + "/15");
         getHTMLCation(this.current_cation);
+
+        //PDF
+        displayFromAsset(SAMPLE_FILE);
+
         if (this.cation_step.equals("First")) {
             this.btnNext.setText("Proceed to next cation");
         } else if (this.cation_step.equals("Second")) {
@@ -83,7 +101,7 @@ public class PostlabResult extends AppCompatActivity {
         this.btnNext = (Button) findViewById(R.id.btnNext);
         this.txtplayer = (TextView) findViewById(R.id.tb_player);
         this.txtscore = (TextView) findViewById(R.id.tb_score);
-        this.imgpostlab = (ImageView) findViewById(R.id.imgpostlab);
+        this.imgpostlab = (PDFView) findViewById(R.id.imgpostlab);
         this.txtcationans = (TextView) findViewById(R.id.txtcationans);
     }
 
@@ -136,5 +154,52 @@ public class PostlabResult extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Please Try Again!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    //PDF Code
+    private void displayFromAsset(String assetFileName) {
+        pdfFileName = assetFileName;
+
+        imgpostlab.fromAsset(SAMPLE_FILE)
+                .defaultPage(pageNumber)
+                .enableSwipe(true)
+
+                .swipeHorizontal(false)
+                .onPageChange(this)
+                .enableAnnotationRendering(true)
+                .onLoad(this)
+                .scrollHandle(new DefaultScrollHandle(this))
+                .load();
+    }
+
+
+    @Override
+    public void onPageChanged(int page, int pageCount) {
+        pageNumber = page;
+        setTitle(String.format("%s %s / %s", pdfFileName, page + 1, pageCount));
+    }
+
+
+    @Override
+    public void loadComplete(int nbPages) {
+        PdfDocument.Meta meta = imgpostlab.getDocumentMeta();
+        printBookmarksTree(imgpostlab.getTableOfContents(), "-");
+
+    }
+
+    public void printBookmarksTree(List<PdfDocument.Bookmark> tree, String sep) {
+        for (PdfDocument.Bookmark b : tree) {
+
+            Log.e("PDF TAG", String.format("%s %s, p %d", sep, b.getTitle(), b.getPageIdx()));
+
+            if (b.hasChildren()) {
+                printBookmarksTree(b.getChildren(), sep + "-");
+            }
+        }
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }

@@ -28,16 +28,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    <ImageView
+    <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/imgpostlab"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/all_wrong_guess"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtcationans" />
+        app:layout_constraintTop_toBottomOf="@+id/txtcationans"/>
 
     <TextView
         android:id="@+id/lblresult"

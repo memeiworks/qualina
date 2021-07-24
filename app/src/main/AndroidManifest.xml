@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/cat_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Qualina">
-        <activity android:name=".CationsGroupPDF"></activity>
+        <activity android:name=".CationGroupViewer"></activity>
+        <activity android:name=".CationsGroupPDF" />
         <activity android:name=".Closing" />
         <activity android:name=".Summary" />
         <activity android:name=".PostlabResult" />
