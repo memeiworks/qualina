@@ -169,8 +169,7 @@ public class CheckResultActivity extends AppCompatActivity {
         } else if (index.equals("vR") || index.contentEquals(Html.fromHtml("K<small><sup>+</sup></small>", 0))) {
             this.txtresult.setText("A REDISH-VIOLET flame lasted for 5 seconds or more was observed.");
             this.current_cation = String.valueOf(Html.fromHtml("K<small><sup>+</sup></small>", 0));
-//            this.imgflask.setImageResource(R.drawable.reddish_violet_blue_filter_res);
-            //To resize image
+            this.imgflask.setImageResource(R.drawable.reddish_violet_res);
             this.color_result = " the appearance of a redish-violet flame that lasted for 5 seconds or more, ";
         } else if (index.equals("yS") || index.contentEquals(Html.fromHtml("Na<small><sup>+</sup></small>", 0))) {
             this.txtresult.setText("An intense YELLOW flame that lasted for 5 seconds or more was observed.");
