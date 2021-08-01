@@ -86,27 +86,27 @@ public class GameIntro extends AppCompatActivity {
             switch (id) {
                 case R.id.groupA:
                     Intent toGroupA = new Intent(GameIntro.this,CationGroupViewer.class);
-                    toGroupA.putExtra("Group A","Group A");
+                    toGroupA.putExtra("Group Cations","Group A");
                     startActivity(toGroupA);
                     return true;
                 case R.id.groupB:
                     Intent toGroupB = new Intent(GameIntro.this,CationGroupViewer.class);
-                    toGroupB.putExtra("Group B","Group B");
+                    toGroupB.putExtra("Group Cations","Group B");
                     startActivity(toGroupB);
                     return true;
                 case R.id.groupC:
                     Intent toGroupC = new Intent(GameIntro.this,CationGroupViewer.class);
-                    toGroupC.putExtra("Group C","Group C");
+                    toGroupC.putExtra("Group Cations","Group C");
                     startActivity(toGroupC);
                     return true;
                 case R.id.groupD:
                     Intent toGroupD = new Intent(GameIntro.this,CationGroupViewer.class);
-                    toGroupD.putExtra("Group D","Group D");
+                    toGroupD.putExtra("Group Cations","Group D");
                     startActivity(toGroupD);
                     return true;
                 case R.id.groupE:
                     Intent toGroupE = new Intent(GameIntro.this,CationGroupViewer.class);
-                    toGroupE.putExtra("Group E","Group E");
+                    toGroupE.putExtra("Group Cations","Group E");
                     startActivity(toGroupE);
                     return true;
                 default:
