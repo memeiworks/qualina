@@ -187,6 +187,11 @@ public class CheckResultActivity extends AppCompatActivity {
     }
 
     public void onBackPressed() {
-        Toast.makeText(CheckResultActivity.this, "Click RETURN button to go back to previous page.", Toast.LENGTH_SHORT).show();
+        String btnText = btnGuess.getText().toString();
+        if (btnText.equalsIgnoreCase("Return")){
+            Toast.makeText(CheckResultActivity.this, "Click RETURN button to go back to previous page.", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "OOPS! You can't go back.", Toast.LENGTH_SHORT).show();
+        }
     }
 }
