@@ -140,12 +140,12 @@ public class CheckResultActivity extends AppCompatActivity {
             this.imgflask.setImageResource(R.drawable.white_res);
             this.color_result = " its white appearance, ";
         } else if (index.equals("cM") || index.contentEquals(Html.fromHtml("Ni<small><sup>2+</sup></small>", 0))) {
-            this.txtresult.setText("The solution turned CHERRY-RED.");
+            this.txtresult.setText("A CHERRY-RED precipitate/solid was produced.");
             this.current_cation = String.valueOf(Html.fromHtml("Ni<small><sup>2+</sup></small>", 0));
             this.imgflask.setImageResource(R.drawable.cherry_red_res);
             this.color_result = " its cherry-red appearance, ";
         } else if (index.equals("mN") || index.contentEquals(Html.fromHtml("Cu<small><sup>2+</sup></small>", 0))) {
-            this.txtresult.setText("The solution turned MAROON.");
+            this.txtresult.setText("A MAROON precipitate/solid was produced.");
             this.current_cation = String.valueOf(Html.fromHtml("Cu<small><sup>2+</sup></small>", 0));
             this.imgflask.setImageResource(R.drawable.maroon_res);
             this.color_result = " its maroon appearance, ";

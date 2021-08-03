@@ -46,7 +46,7 @@
         android:background="@color/gray"
         android:textAlignment="center"
         android:padding="10dp"
-        android:text="Note: TAKE A SCREENSHOT!"
+        android:text="Note: You can zoom in/out the PDF file."
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

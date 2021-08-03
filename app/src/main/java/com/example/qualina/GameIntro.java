@@ -25,7 +25,7 @@ public class GameIntro extends AppCompatActivity {
     TextView txtname;
     EditText edtname;
     ImageView img_cat;
-    String playerName;
+    String playerName, extra;
     Button btnstart;
 
     @Override

@@ -21,7 +21,10 @@ public class Closing extends AppCompatActivity {
         clcredits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Closing.this, GameIntro.class));
+                Intent toGameIntro = new Intent(Closing.this, GameIntro.class);
+                toGameIntro.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                toGameIntro.putExtra("Closing","Closing");
+                startActivity(toGameIntro);
             }
         });
     }

@@ -31,6 +31,11 @@ public class PostlabResult extends AppCompatActivity implements OnPageChangeList
 
     //PDF
     public static final String SAMPLE_FILE = "file_example_PDF_1MB.pdf";
+    public static final String POSTLAB_A = "postlab_group_a.pdf";
+    public static final String POSTLAB_B = "postlab_group_b.pdf";
+    public static final String POSTLAB_C = "postlab_group_c.pdf";
+    public static final String POSTLAB_D = "postlab_group_d.pdf";
+    public static final String POSTLAB_E = "postlab_group_e.pdf";
     Integer pageNumber = 0;
     String pdfFileName;
 
@@ -50,9 +55,6 @@ public class PostlabResult extends AppCompatActivity implements OnPageChangeList
         TextView textView = this.txtscore;
         textView.setText("SCORE: " + current_score + "/15");
         getHTMLCation(this.current_cation);
-
-        //PDF
-        displayFromAsset(SAMPLE_FILE);
 
         if (this.cation_step.equals("First")) {
             this.btnNext.setText("Proceed to next cation");
@@ -111,46 +113,66 @@ public class PostlabResult extends AppCompatActivity implements OnPageChangeList
         }
         if (index.equals("wA") || index.contentEquals(Html.fromHtml("Ag<small><sup>+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Ag<small><sup>+</sup></small>", 0));
+            displayFromAsset(POSTLAB_A);
         } else if (index.equals("yB") || index.contentEquals(Html.fromHtml("Pb<small><sup>2+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Pb<small><sup>2+</sup></small>", 0));
+            displayFromAsset(POSTLAB_A);
         } else if (index.equals("bC") || index.contentEquals(Html.fromHtml("Hg<small><sub>2</sub><sup>2+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Hg<small><sub>2</sub><sup>2+</sup></small>", 0));
+            displayFromAsset(POSTLAB_A);
         } else if (index.equals("cD") || index.contentEquals(Html.fromHtml("Cr<small><sup>3+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Cr<small><sup>3+</sup></small>", 0));
+            displayFromAsset(POSTLAB_B);
         } else if (index.equals("pE") || index.contentEquals(Html.fromHtml("Mn<small><sup>4+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Mn<small><sup>4+</sup></small>", 0));
+            displayFromAsset(POSTLAB_B);
         } else if (index.equals("rF") || index.contentEquals(Html.fromHtml("Fe<small><sup>3+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Fe<small><sup>3+</sup></small>", 0));
+            displayFromAsset(POSTLAB_B);
         } else if (index.equals("bG") || index.contentEquals(Html.fromHtml("Bi<small><sup>3+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Bi<small><sup>3+</sup></small>", 0));
+            displayFromAsset(POSTLAB_B);
         } else if (index.equals("yH") || index.contentEquals(Html.fromHtml("Ba<small><sup>2+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Ba<small><sup>2+</sup></small>", 0));
+            displayFromAsset(POSTLAB_C);
         } else if (index.equals("yI") || index.contentEquals(Html.fromHtml("Co<small><sup>2+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Co<small><sup>2+</sup></small>", 0));
+            displayFromAsset(POSTLAB_C);
         } else if (index.equals("wJ") || index.contentEquals(Html.fromHtml("Ca<small><sup>2+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Ca<small><sup>2+</sup></small>", 0));
+            displayFromAsset(POSTLAB_C);
         } else if (index.equals("wK") || index.contentEquals(Html.fromHtml("Sr<small><sup>2+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Sr<small><sup>2+</sup></small>", 0));
+            displayFromAsset(POSTLAB_C);
         } else if (index.equals("wL") || index.contentEquals(Html.fromHtml("Mg<small><sup>2+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Mg<small><sup>2+</sup></small>", 0));
+            displayFromAsset(POSTLAB_D);
         } else if (index.equals("cM") || index.contentEquals(Html.fromHtml("Ni<small><sup>2+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Ni<small><sup>2+</sup></small>", 0));
+            displayFromAsset(POSTLAB_D);
         } else if (index.equals("mN") || index.contentEquals(Html.fromHtml("Cu<small><sup>2+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Cu<small><sup>2+</sup></small>", 0));
+            displayFromAsset(POSTLAB_D);
         } else if (index.equals("wO") || index.equals("yP") || index.contentEquals(Html.fromHtml("Cd<small><sup>2+</sup></small>", 0))) {
             if (index.equals("wO")) {
                 this.txtcationans.setText(Html.fromHtml("Your cation was Cd<small><sup>2+</sup></small>", 0));
+                displayFromAsset(POSTLAB_D);
             } else {
                 this.txtcationans.setText(Html.fromHtml("Your cation was Cd<small><sup>2+</sup></small>", 0));
+                displayFromAsset(POSTLAB_D);
             }
         } else if (index.equals("wQ") || index.contentEquals(Html.fromHtml("Zn<small><sup>2+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Zn<small><sup>2+</sup></small>", 0));
+            displayFromAsset(POSTLAB_D);
         } else if (index.equals("vR") || index.contentEquals(Html.fromHtml("K<small><sup>+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was K<small><sup>+</sup></small>", 0));
+            displayFromAsset(POSTLAB_E);
         } else if (index.equals("yS") || index.contentEquals(Html.fromHtml("Na<small><sup>+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Na<small><sup>+</sup></small>", 0));
+            displayFromAsset(POSTLAB_E);
         } else if (index.equals("bT") || index.contentEquals(Html.fromHtml("NH<small><sub>4</sub><sup>+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was NH<small><sub>4</sub><sup>+</sup></small>", 0));
+            displayFromAsset(POSTLAB_E);
         } else {
             Toast.makeText(this, "Please Try Again!", Toast.LENGTH_SHORT).show();
         }
@@ -160,10 +182,9 @@ public class PostlabResult extends AppCompatActivity implements OnPageChangeList
     private void displayFromAsset(String assetFileName) {
         pdfFileName = assetFileName;
 
-        imgpostlab.fromAsset(SAMPLE_FILE)
+        imgpostlab.fromAsset(pdfFileName)
                 .defaultPage(pageNumber)
                 .enableSwipe(true)
-
                 .swipeHorizontal(false)
                 .onPageChange(this)
                 .enableAnnotationRendering(true)
@@ -176,7 +197,17 @@ public class PostlabResult extends AppCompatActivity implements OnPageChangeList
     @Override
     public void onPageChanged(int page, int pageCount) {
         pageNumber = page;
-        setTitle(String.format("%s %s / %s", "Postlab Result", page + 1, pageCount));
+        if (pdfFileName.equalsIgnoreCase("postlab_group_a.pdf")) {
+            setTitle(String.format("%s %s / %s", "Postlab Result - Group A", page + 1, pageCount));
+        } else if (pdfFileName.equalsIgnoreCase("postlab_group_b.pdf")) {
+            setTitle(String.format("%s %s / %s", "Postlab Result - Group B", page + 1, pageCount));
+        } else if (pdfFileName.equalsIgnoreCase("postlab_group_c.pdf")) {
+            setTitle(String.format("%s %s / %s", "Postlab Result - Group C", page + 1, pageCount));
+        } else if (pdfFileName.equalsIgnoreCase("postlab_group_d.pdf")) {
+            setTitle(String.format("%s %s / %s", "Postlab Result - Group D", page + 1, pageCount));
+        } else {
+            setTitle(String.format("%s %s / %s", "Postlab Result - Group E", page + 1, pageCount));
+        }
     }
 
 
