@@ -1,6 +1,7 @@
 package com.example.qualina;
 
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,7 @@ public class UnknownSampleCode extends AppCompatActivity {
     TextView code3;
     TextView player_name;
     TextView score;
+    ConstraintLayout clCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,5 +58,6 @@ public class UnknownSampleCode extends AppCompatActivity {
         code3 = findViewById(R.id.txtCation3);
         player_name = findViewById(R.id.tb_player);
         score = findViewById(R.id.tb_score);
+        clCode = findViewById(R.id.clCode);
     }
 }

@@ -46,7 +46,7 @@
     <string name="lp_redtoblue">Red litmus paper turned blue.</string>
     <string name="add_40d_ammox">Add 40 drops of 0.5 M ammonium oxalate. Stir thoroughly and centrifuge.</string>
     <string name="wash_10d_6mhci">Wash the precipitate with 10 drops of distilled water and dissolve the precipitate using 6 M HCI dropwise.</string>
-    <string name="heat_to_dry">Heat to dryness in low heat the cool for 5 minutes.</string>
+    <string name="heat_to_dry">Heat to dryness in low heat then cool for 5 minutes.</string>
     <string name="dissolve_transfer">Dissolve the residue in 5 drops of 6 M HCI and transfer quantitatively in a centrifuge tube using distilled water.</string>
     <string name="lp_blue_slightred">Blue litmus paper turned slightly red.</string>
     <string name="cool_1_min">Cool for 1 minute by swirling in cold temperature then centrifuge.</string>
@@ -60,7 +60,7 @@
     <string name="add_6macetic">Add 6 M acetic acid dropwise with stirring until slightly acidic.</string>
     <string name="clean_pat_wire">Clean the platinum wire loop by dipping it into clean concentrated HCI then heating it over direct flames until the wire loop is red-hot. Repeat this process until the wire loop imparts no appreciable color to the flame.</string>
     <string name="evap_2d_cent_discard_solids">Evaporate to about 2 drops of the centrifugate. Cool and discard any precipitates/solids formed.</string>
-    <string name="add_1d_input_wire">Add 1 drops of concentrated HCI then dip the cleaned wire loop to the solution to be tested. Insert the wire loop into the oxidizing zone of the flame.</string>
+    <string name="add_1d_input_wire">Add 1 drop of concentrated HCI then dip the cleaned wire loop to the solution to be tested. Insert the wire loop into the oxidizing zone of the flame.</string>
     <string name="observe_flame_blue_filter">Observe the flame through blue filter.</string>
     <string name="place_10_make_6mnaoh_add2">Place 10 drops of this solution in an evaporating dish. Make it alkaline with 6 M NaOH, then add 2 more drops.</string>
     <string name="watchglass_lp">On the underside of a watchglass, attach a wet red litmus paper then use that watchglass to cover the dish. Warm the solution but do not boil.</string>
