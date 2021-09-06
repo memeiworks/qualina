@@ -99,9 +99,9 @@ public class CheckResultActivity extends AppCompatActivity {
             this.current_cation = String.valueOf(Html.fromHtml("Cr<small><sup>3+</sup></small>", 0));
             this.imgflask.setImageResource(R.drawable.blue_flash_res);
             this.color_result = " its blue flash of color appearance in the liquid, ";
-        } else if (index.equals("pE") || index.contentEquals(Html.fromHtml("Mn<small><sup>4+</sup></small>", 0))) {
+        } else if (index.equals("pE") || index.contentEquals(Html.fromHtml("Mn<small><sup>2+</sup></small>", 0))) {
             this.txtresult.setText("The solution turned PURPLE.");
-            this.current_cation = String.valueOf(Html.fromHtml("Mn<small><sup>4+</sup></small>", 0));
+            this.current_cation = String.valueOf(Html.fromHtml("Mn<small><sup>2+</sup></small>", 0));
             this.imgflask.setImageResource(R.drawable.purple_res);
             this.color_result = " its PURPLE appearance, ";
         } else if (index.equals("rF") || index.contentEquals(Html.fromHtml("Fe<small><sup>3+</sup></small>", 0))) {
@@ -167,10 +167,10 @@ public class CheckResultActivity extends AppCompatActivity {
             this.imgflask.setImageResource(R.drawable.white_res);
             this.color_result = " its white appearance, ";
         } else if (index.equals("vR") || index.contentEquals(Html.fromHtml("K<small><sup>+</sup></small>", 0))) {
-            this.txtresult.setText("A REDISH-VIOLET flame lasted for 5 seconds or more was observed.");
+            this.txtresult.setText("A REDDISH-VIOLET flame lasted for 5 seconds or more was observed.");
             this.current_cation = String.valueOf(Html.fromHtml("K<small><sup>+</sup></small>", 0));
             this.imgflask.setImageResource(R.drawable.reddish_violet_res);
-            this.color_result = " the appearance of a redish-violet flame that lasted for 5 seconds or more, ";
+            this.color_result = " the appearance of a reddish-violet flame that lasted for 5 seconds or more, ";
         } else if (index.equals("yS") || index.contentEquals(Html.fromHtml("Na<small><sup>+</sup></small>", 0))) {
             this.txtresult.setText("An intense YELLOW flame that lasted for 5 seconds or more was observed.");
             this.current_cation = String.valueOf(Html.fromHtml("Na<small><sup>+</sup></small>", 0));

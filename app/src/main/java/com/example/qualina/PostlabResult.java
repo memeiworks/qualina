@@ -123,8 +123,8 @@ public class PostlabResult extends AppCompatActivity implements OnPageChangeList
         } else if (index.equals("cD") || index.contentEquals(Html.fromHtml("Cr<small><sup>3+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Cr<small><sup>3+</sup></small>", 0));
             displayFromAsset(POSTLAB_B);
-        } else if (index.equals("pE") || index.contentEquals(Html.fromHtml("Mn<small><sup>4+</sup></small>", 0))) {
-            this.txtcationans.setText(Html.fromHtml("Your cation was Mn<small><sup>4+</sup></small>", 0));
+        } else if (index.equals("pE") || index.contentEquals(Html.fromHtml("Mn<small><sup>2+</sup></small>", 0))) {
+            this.txtcationans.setText(Html.fromHtml("Your cation was Mn<small><sup>2+</sup></small>", 0));
             displayFromAsset(POSTLAB_B);
         } else if (index.equals("rF") || index.contentEquals(Html.fromHtml("Fe<small><sup>3+</sup></small>", 0))) {
             this.txtcationans.setText(Html.fromHtml("Your cation was Fe<small><sup>3+</sup></small>", 0));

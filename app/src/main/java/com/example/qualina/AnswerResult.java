@@ -160,8 +160,8 @@ public class AnswerResult extends AppCompatActivity {
             this.lblResult.setText(Html.fromHtml("Your cation was Hg<small><sub>2</sub><sup>2+</sup></small>", 0));
         } else if (index.equals("cD") || index.contentEquals(Html.fromHtml("Cr<small><sup>3+</sup></small>", 0))) {
             this.lblResult.setText(Html.fromHtml("Your cation was Cr<small><sup>3+</sup></small>", 0));
-        } else if (index.equals("pE") || index.contentEquals(Html.fromHtml("Mn<small><sup>4+</sup></small>", 0))) {
-            this.lblResult.setText(Html.fromHtml("Your cation was Mn<small><sup>4+</sup></small>", 0));
+        } else if (index.equals("pE") || index.contentEquals(Html.fromHtml("Mn<small><sup>2+</sup></small>", 0))) {
+            this.lblResult.setText(Html.fromHtml("Your cation was Mn<small><sup>2+</sup></small>", 0));
         } else if (index.equals("rF") || index.contentEquals(Html.fromHtml("Fe<small><sup>3+</sup></small>", 0))) {
             this.lblResult.setText(Html.fromHtml("Your cation was Fe<small><sup>3+</sup></small>", 0));
         } else if (index.equals("bG") || index.contentEquals(Html.fromHtml("Bi<small><sup>3+</sup></small>", 0))) {

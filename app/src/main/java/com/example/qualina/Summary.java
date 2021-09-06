@@ -121,19 +121,19 @@ public class Summary extends AppCompatActivity {
                 TextView textView16 = this.txtcat1;
                 textView16.setText(Html.fromHtml("You were able to confirm Cr<small><sup>3+</sup></small> through" + this.result1 + "after 3 tries, which gives you " + gotScore12 + " point. Based on the flowcharts for the analysis, it is from Group B.", 0));
             }
-        } else if (index.equals("Mn4+")) {
+        } else if (index.equals("Mn2+")) {
             if (gotScore12 == 0) {
                 TextView textView17 = this.txtcat1;
-                textView17.setText(Html.fromHtml("You were not able to confirm Mn<small><sup>4+</sup></small> through" + this.result1 + "after 3 tries, which gives you " + gotScore12 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView17.setText(Html.fromHtml("You were not able to confirm Mn<small><sup>2+</sup></small> through" + this.result1 + "after 3 tries, which gives you " + gotScore12 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
             } else if (gotScore12 == 3) {
                 TextView textView18 = this.txtcat1;
-                textView18.setText(Html.fromHtml("You were able to confirm Mn<small><sup>4+</sup></small> through" + this.result1 + "after 2 tries, which gives you " + gotScore12 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView18.setText(Html.fromHtml("You were able to confirm Mn<small><sup>2+</sup></small> through" + this.result1 + "after 2 tries, which gives you " + gotScore12 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
             } else if (gotScore12 == 5) {
                 TextView textView19 = this.txtcat1;
-                textView19.setText(Html.fromHtml("You were able to confirm Mn<small><sup>4+</sup></small> through" + this.result1 + "after 1 try, which gives you " + gotScore12 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView19.setText(Html.fromHtml("You were able to confirm Mn<small><sup>2+</sup></small> through" + this.result1 + "after 1 try, which gives you " + gotScore12 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
             } else {
                 TextView textView20 = this.txtcat1;
-                textView20.setText(Html.fromHtml("You were able to confirm Mn<small><sup>4+</sup></small> through" + this.result1 + "after 3 tries, which gives you " + gotScore12 + " point. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView20.setText(Html.fromHtml("You were able to confirm Mn<small><sup>2+</sup></small> through" + this.result1 + "after 3 tries, which gives you " + gotScore12 + " point. Based on the flowcharts for the analysis, it is from Group B.", 0));
             }
         } else if (index.equals("Fe3+")) {
             if (gotScore12 == 0) {
@@ -394,19 +394,19 @@ public class Summary extends AppCompatActivity {
                 TextView textView16 = this.txtcat2;
                 textView16.setText(Html.fromHtml("You were able to confirm Cr<small><sup>3+</sup></small> through" + this.result2 + "after 3 tries, which gives you " + gotScore22 + " point. Based on the flowcharts for the analysis, it is from Group B.", 0));
             }
-        } else if (index.equals("Mn4+")) {
+        } else if (index.equals("Mn2+")) {
             if (gotScore22 == 0) {
                 TextView textView17 = this.txtcat2;
-                textView17.setText(Html.fromHtml("You were not able to confirm Mn<small><sup>4+</sup></small> through" + this.result2 + "after 3 tries, which gives you " + gotScore22 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView17.setText(Html.fromHtml("You were not able to confirm Mn<small><sup>2+</sup></small> through" + this.result2 + "after 3 tries, which gives you " + gotScore22 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
             } else if (gotScore22 == 3) {
                 TextView textView18 = this.txtcat2;
-                textView18.setText(Html.fromHtml("You were able to confirm Mn<small><sup>4+</sup></small> through" + this.result2 + "after 2 tries, which gives you " + gotScore22 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView18.setText(Html.fromHtml("You were able to confirm Mn<small><sup>2+</sup></small> through" + this.result2 + "after 2 tries, which gives you " + gotScore22 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
             } else if (gotScore22 == 5) {
                 TextView textView19 = this.txtcat2;
-                textView19.setText(Html.fromHtml("You were able to confirm Mn<small><sup>4+</sup></small> through" + this.result2 + "after 1 try, which gives you " + gotScore22 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView19.setText(Html.fromHtml("You were able to confirm Mn<small><sup>2+</sup></small> through" + this.result2 + "after 1 try, which gives you " + gotScore22 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
             } else {
                 TextView textView20 = this.txtcat2;
-                textView20.setText(Html.fromHtml("You were able to confirm Mn<small><sup>4+</sup></small> through" + this.result2 + "after 3 tries, which gives you " + gotScore22 + " point. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView20.setText(Html.fromHtml("You were able to confirm Mn<small><sup>2+</sup></small> through" + this.result2 + "after 3 tries, which gives you " + gotScore22 + " point. Based on the flowcharts for the analysis, it is from Group B.", 0));
             }
         } else if (index.equals("Fe3+")) {
             if (gotScore22 == 0) {
@@ -667,19 +667,19 @@ public class Summary extends AppCompatActivity {
                 TextView textView16 = this.txtcat3;
                 textView16.setText(Html.fromHtml("You were able to confirm Cr<small><sup>3+</sup></small> through" + this.result3 + "after 3 tries, which gives you " + gotScore32 + " point. Based on the flowcharts for the analysis, it is from Group B.", 0));
             }
-        } else if (index.equals("Mn4+")) {
+        } else if (index.equals("Mn2+")) {
             if (gotScore32 == 0) {
                 TextView textView17 = this.txtcat3;
-                textView17.setText(Html.fromHtml("You were not able to confirm Mn<small><sup>4+</sup></small> through" + this.result3 + "after 3 tries, which gives you " + gotScore32 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView17.setText(Html.fromHtml("You were not able to confirm Mn<small><sup>2+</sup></small> through" + this.result3 + "after 3 tries, which gives you " + gotScore32 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
             } else if (gotScore32 == 3) {
                 TextView textView18 = this.txtcat3;
-                textView18.setText(Html.fromHtml("You were able to confirm Mn<small><sup>4+</sup></small> through" + this.result3 + "after 2 tries, which gives you " + gotScore32 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView18.setText(Html.fromHtml("You were able to confirm Mn<small><sup>2+</sup></small> through" + this.result3 + "after 2 tries, which gives you " + gotScore32 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
             } else if (gotScore32 == 5) {
                 TextView textView19 = this.txtcat3;
-                textView19.setText(Html.fromHtml("You were able to confirm Mn<small><sup>4+</sup></small> through" + this.result3 + "after 1 try, which gives you " + this.gotScore2 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView19.setText(Html.fromHtml("You were able to confirm Mn<small><sup>2+</sup></small> through" + this.result3 + "after 1 try, which gives you " + this.gotScore2 + " points. Based on the flowcharts for the analysis, it is from Group B.", 0));
             } else {
                 TextView textView20 = this.txtcat3;
-                textView20.setText(Html.fromHtml("You were able to confirm Mn<small><sup>4+</sup></small> through" + this.result3 + "after 3 tries, which gives you " + this.gotScore2 + " point. Based on the flowcharts for the analysis, it is from Group B.", 0));
+                textView20.setText(Html.fromHtml("You were able to confirm Mn<small><sup>2+</sup></small> through" + this.result3 + "after 3 tries, which gives you " + this.gotScore2 + " point. Based on the flowcharts for the analysis, it is from Group B.", 0));
             }
         } else if (index.equals("Fe3+")) {
             if (gotScore32 == 0) {
