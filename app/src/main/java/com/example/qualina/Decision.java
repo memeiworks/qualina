@@ -4133,6 +4133,7 @@ public class Decision extends AppCompatActivity {
                                                                                             Decision.this.btnDecision2.setText(R.string.centrifugate);
                                                                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                                                                 public void onClick(View v) {
+                                                                                                    Decision.this.toNotable = new Intent(Decision.this, NoNotable.class);
                                                                                                     Decision.this.toNotable.putExtra("Current Cation", index);
                                                                                                     Decision.this.toNotable.putExtra("Result", "Nothing");
                                                                                                     Decision.this.toNotable.putExtra("Current Score", Decision.this.current_score);
