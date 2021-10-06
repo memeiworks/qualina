@@ -74,6 +74,7 @@
     <string name="note_you_have_3_attempts">Note: You have 3 attempts!</string>
     <string name="you_got_correct_answer">You got the correct answer!</string>
     <string name="try_again">Try Again</string>
+    <string name="Flowcharts">Flowcharts</string>
     <string-array name="cationslist">
         <item><font fgcolor="#FFFFFF">Select a Cation</font></item>
         <item><font fgcolor="#FFFFFF">Ag<small><sup>+</sup></small></font></item>

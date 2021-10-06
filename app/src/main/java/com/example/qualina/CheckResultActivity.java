@@ -47,24 +47,35 @@ public class CheckResultActivity extends AppCompatActivity {
                 }
             });
             return;
+        } else if (result.equals("Nothing2")) {
+            imgflask.setImageResource(R.drawable.yes_decision_flame_test);
+            txtresult.setVisibility(View.INVISIBLE);
+            btnGuess.setText(R.string.str_return);
+            btnGuess.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    finish();
+                    Toast.makeText(CheckResultActivity.this, "Click BACK of your device to return to previous page.", Toast.LENGTH_SHORT).show();
+                }
+            });
+        } else {
+            getCationIndex(result);
+            btnGuess.setText(R.string.guess_your_cation);
+            btnGuess.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent toGuess = new Intent(CheckResultActivity.this, GuessCation.class);
+                    toGuess.putExtra("Result", result);
+                    toGuess.putExtra("Current Player", player);
+                    toGuess.putExtra("Cation 1", cation1);
+                    toGuess.putExtra("Cation 2", cation2);
+                    toGuess.putExtra("Cation 3", cation3);
+                    toGuess.putExtra("Current Score", current_score);
+                    toGuess.putExtra("Current Cation", current_cation);
+                    toGuess.putExtra("Cation Step", cation_step);
+                    toGuess.putExtra("Color Result", color_result);
+                    startActivity(toGuess);
+                }
+            });
         }
-        getCationIndex(result);
-        btnGuess.setText(R.string.guess_your_cation);
-        btnGuess.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent toGuess = new Intent(CheckResultActivity.this, GuessCation.class);
-                toGuess.putExtra("Result", result);
-                toGuess.putExtra("Current Player", player);
-                toGuess.putExtra("Cation 1", cation1);
-                toGuess.putExtra("Cation 2", cation2);
-                toGuess.putExtra("Cation 3", cation3);
-                toGuess.putExtra("Current Score", current_score);
-                toGuess.putExtra("Current Cation", current_cation);
-                toGuess.putExtra("Cation Step", cation_step);
-                toGuess.putExtra("Color Result", color_result);
-                startActivity(toGuess);
-            }
-        });
     }
 
     public void bindViews() {

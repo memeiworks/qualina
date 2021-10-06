@@ -140,7 +140,7 @@ public class NoNotable extends AppCompatActivity {
             this.btncheckresult.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent toCheckResult = new Intent(NoNotable.this, CheckResultActivity.class);
-                    toCheckResult.putExtra("Result", "Nothing");
+                    toCheckResult.putExtra("Result", "Nothing2");
                     toCheckResult.putExtra("Current Score", NoNotable.this.current_score);
                     toCheckResult.putExtra("Current Player", NoNotable.this.player);
                     NoNotable.this.startActivity(toCheckResult);

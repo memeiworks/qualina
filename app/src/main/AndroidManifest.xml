@@ -21,7 +21,7 @@
         <activity android:name=".LoadingScreen" />
         <activity android:name=".Decision" />
         <activity android:name=".UnknownSampleCode" />
-        <activity android:name=".GameIntro" />
+        <activity android:name=".GameIntro"/>
         <activity android:name=".ExerciseIntro" />
         <activity android:name=".AboutGame" />
         <activity android:name=".MainActivity">

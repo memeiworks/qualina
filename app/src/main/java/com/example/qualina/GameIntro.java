@@ -1,9 +1,12 @@
 package com.example.qualina;
 
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -73,6 +76,7 @@ public class GameIntro extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.cations_group_list, menu);
         return true;
+
     }
 
     public void setSupportActionBar(Toolbar toolbar) {
