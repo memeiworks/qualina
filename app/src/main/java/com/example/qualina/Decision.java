@@ -4728,7 +4728,7 @@ public class Decision extends AppCompatActivity {
                                         Decision.this.toNotable = new Intent(Decision.this, NoNotable.class);
                                         Decision.this.toNotable.putExtra("Current Cation", index);
                                         Decision.this.toNotable.putExtra("Result", "Nothing");
-                                        Decision.this.toNotable.putExtra("Notable Result", "Nothing");
+                                        Decision.this.toNotable.putExtra("Notable Result", "No Notable2");
                                         Decision.this.toNotable.putExtra("Current Score", Decision.this.current_score);
                                         Decision.this.toNotable.putExtra("Current Player", Decision.this.player);
                                         Decision.this.startActivity(Decision.this.toNotable);
@@ -4910,7 +4910,7 @@ public class Decision extends AppCompatActivity {
                                         Decision.this.toNotable.putExtra("Current Cation", index);
                                         Decision.this.toNotable.putExtra("Result", "Nothing");
                                         Decision.this.toNotable.putExtra("Current Score", Decision.this.current_score);
-                                        Decision.this.toNotable.putExtra("Notable Result", "Nothing");
+                                        Decision.this.toNotable.putExtra("Notable Result", "No Notable2");
                                         Decision.this.toNotable.putExtra("Current Player", Decision.this.player);
                                         Decision.this.startActivity(Decision.this.toNotable);
                                     }
