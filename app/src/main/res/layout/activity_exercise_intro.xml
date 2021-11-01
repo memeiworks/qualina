@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/lab_general"
+    android:background="@drawable/newlabbg"
     android:id="@+id/clexerciseintro"
     tools:context=".ExerciseIntro">
 
@@ -12,7 +12,7 @@
         android:id="@+id/img2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/game_intro_page_2"
+        android:src="@drawable/newgamemech"
         android:scaleType="fitXY"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -23,16 +23,30 @@
             android:textSize="16sp"/>
 
         <TextView
+            android:id="@+id/timertext"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/tb_score"
+            android:layout_toEndOf="@+id/tb_player"
+            android:text="10:00"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/tb_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="69dp"
-            android:layout_marginEnd="14dp"
+            android:layout_marginEnd="0dp"
             android:text="@string/score_0_15"
-            android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
     </RelativeLayout>
 
 </android.support.v7.widget.Toolbar>

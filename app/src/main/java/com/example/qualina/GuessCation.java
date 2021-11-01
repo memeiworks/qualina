@@ -2,6 +2,7 @@ package com.example.qualina;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,7 @@ public class GuessCation extends AppCompatActivity {
     SharedPreferences preferences;
     int totalScore;
     TextView txtattempts, txtplayer, txtscore;
+    MediaPlayer correctsnd, wrongsnd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,9 @@ public class GuessCation extends AppCompatActivity {
         this.preferences = getSharedPreferences("ScoreCation", 0);
         TextView textView = this.txtscore;
         textView.setText("SCORE: " + current_score + "/15");
+
+        correctsnd = MediaPlayer.create(GuessCation.this,R.raw.sndright);
+        wrongsnd = MediaPlayer.create(GuessCation.this,R.raw.sndwrong);
 
         this.ddcations.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -74,6 +79,7 @@ public class GuessCation extends AppCompatActivity {
         if (index.equals(extra2)) {
             String str6 = "Score";
             this.txtattempts.setText(R.string.you_got_correct_answer);
+            correctsnd.start();
             int i = this.attempts;
             if (i == 3) {
                 this.attempts = 3;
@@ -227,6 +233,7 @@ public class GuessCation extends AppCompatActivity {
         StringBuilder sb = new StringBuilder();
         String str20 = "Result";
         sb.append("Incorrect Answer! You only have ");
+        wrongsnd.start();
         sb.append(this.attempts);
         sb.append(" left!");
         textView.setText(sb.toString());

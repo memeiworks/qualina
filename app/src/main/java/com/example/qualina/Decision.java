@@ -2,6 +2,7 @@ package com.example.qualina;
 
 import android.content.Intent;
 import android.os.Build;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Locale;
 
 public class Decision extends AppCompatActivity {
 
@@ -22,6 +25,12 @@ public class Decision extends AppCompatActivity {
     TextView player_name, score;
     Intent toNotable, toResult, toloading;
     TextView txtCations, txtQuestion;
+    TextView timertext;
+
+    private CountDownTimer countDownTimer;
+    private boolean mTimerRunning;
+    private static final long START_TIME_MILLIS = 600000;
+    private long timeleftmillis = START_TIME_MILLIS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +50,13 @@ public class Decision extends AppCompatActivity {
         cation_step = getIntent().getStringExtra("Cation Step");
         score.setText("SCORE: " + current_score + "/15");
         player_name.setText(player);
+
+        if (mTimerRunning) {
+
+        } else {
+            timertext.setVisibility(View.VISIBLE);
+            startTimer();
+        }
 
         if (this.cation_step.equals("First")) {
             getCationIndex(cation1);
@@ -62,6 +78,7 @@ public class Decision extends AppCompatActivity {
         player_name = findViewById(R.id.tb_player);
         score = findViewById(R.id.tb_score);
         imgflask = findViewById(R.id.imgflask);
+        timertext = findViewById(R.id.timertext);
     }
 
     public void getCationIndex(final String index) {
@@ -5107,5 +5124,38 @@ public class Decision extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    public void startTimer() {
+        countDownTimer = new CountDownTimer(timeleftmillis,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeleftmillis = millisUntilFinished;
+                updateCountDownTimer();
+            }
+
+            @Override
+            public void onFinish() {
+                mTimerRunning = false;
+                Intent intent = new Intent(Decision.this, LoadingScreen.class);
+                startActivity(intent);
+                resetTimer();
+            }
+        }.start();
+
+        mTimerRunning = true;
+    }
+
+    public void updateCountDownTimer(){
+        int minutes = (int) (timeleftmillis/1000) / 60;
+        int seconds = (int) (timeleftmillis/1000) % 60;
+
+        String timeleftformatted =  String.format(Locale.getDefault(),"%02d:%02d",minutes,seconds);
+        timertext.setText(timeleftformatted);
+    }
+
+    public void resetTimer(){
+        timeleftmillis = START_TIME_MILLIS;
+        updateCountDownTimer();
     }
 }

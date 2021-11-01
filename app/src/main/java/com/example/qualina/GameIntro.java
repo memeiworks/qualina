@@ -5,6 +5,7 @@ import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -37,6 +38,8 @@ public class GameIntro extends AppCompatActivity {
         setContentView(R.layout.activity_game_intro);
         bindViews();
         setSupportActionBar(toolbar);
+
+        Toast.makeText(this, "Please press ENTER after name input to proceed.", Toast.LENGTH_LONG).show();
 
         getPlayerName();
         btnstart.setOnClickListener(new View.OnClickListener() {

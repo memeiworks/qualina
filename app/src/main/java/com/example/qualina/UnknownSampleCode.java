@@ -1,6 +1,7 @@
 package com.example.qualina;
 
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Locale;
 
 public class UnknownSampleCode extends AppCompatActivity {
 
@@ -30,6 +32,7 @@ public class UnknownSampleCode extends AppCompatActivity {
         generateRandomCations();
         final String player = getIntent().getStringExtra("Current Player");
         player_name.setText(player);
+
         btnproceed.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent toDecisionPage = new Intent(UnknownSampleCode.this, Decision.class);
@@ -41,6 +44,7 @@ public class UnknownSampleCode extends AppCompatActivity {
                 toDecisionPage.putExtra("Cation Step", "First");
                 UnknownSampleCode.this.startActivity(toDecisionPage);
             }
+
         });
     }
 

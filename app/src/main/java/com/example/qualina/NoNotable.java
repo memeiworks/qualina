@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class NoNotable extends AppCompatActivity {
 
     Button btncheckresult;
@@ -17,6 +19,7 @@ public class NoNotable extends AppCompatActivity {
     ImageView imgflask;
     String notable_res, player, result;
     TextView txtplayer, txtpreresult, txtscore;
+    TextView timertext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,7 @@ public class NoNotable extends AppCompatActivity {
         this.txtpreresult = (TextView) findViewById(R.id.txtpreresult);
         this.btncheckresult = (Button) findViewById(R.id.btnCheckResult);
         this.imgflask = (ImageView) findViewById(R.id.imgflask);
+        timertext = findViewById(R.id.timertext);
     }
 
     public void getCationIndex(String index) {
