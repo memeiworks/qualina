@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/gifcentri"
-        android:layout_width="300dp"
-        android:layout_height="450dp"
+        android:layout_width="250dp"
+        android:layout_height="400dp"
         android:scaleType="fitXY"
         android:src="@drawable/centrifugingimg"
         app:layout_constraintBottom_toBottomOf="parent"

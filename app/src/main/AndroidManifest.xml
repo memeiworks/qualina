@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/cat_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.Qualina">
-        <activity android:name=".CationGroupViewer"></activity>
+        <activity android:name=".CountdownSummary"></activity>
+        <activity android:name=".CationGroupViewer" />
         <activity android:name=".CationsGroupPDF" />
         <activity android:name=".Closing" />
         <activity android:name=".Summary" />
@@ -21,7 +22,7 @@
         <activity android:name=".LoadingScreen" />
         <activity android:name=".Decision" />
         <activity android:name=".UnknownSampleCode" />
-        <activity android:name=".GameIntro"/>
+        <activity android:name=".GameIntro" />
         <activity android:name=".ExerciseIntro" />
         <activity android:name=".AboutGame" />
         <activity android:name=".MainActivity">

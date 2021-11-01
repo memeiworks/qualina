@@ -1,6 +1,7 @@
 package com.example.qualina;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -29,8 +30,9 @@ public class Decision extends AppCompatActivity {
 
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
-    private static final long START_TIME_MILLIS = 600000;
+    private static final long START_TIME_MILLIS = 200000;
     private long timeleftmillis = START_TIME_MILLIS;
+    private long mEndTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +53,8 @@ public class Decision extends AppCompatActivity {
         score.setText("SCORE: " + current_score + "/15");
         player_name.setText(player);
 
-        if (mTimerRunning) {
-
-        } else {
-            timertext.setVisibility(View.VISIBLE);
-            startTimer();
-        }
+        timertext.setVisibility(View.VISIBLE);
+        startTimer();
 
         if (this.cation_step.equals("First")) {
             getCationIndex(cation1);
@@ -81,7 +79,7 @@ public class Decision extends AppCompatActivity {
         timertext = findViewById(R.id.timertext);
     }
 
-    public void getCationIndex(final String index) {
+    public void getCationIndex(final String index)  {
         if (index.equals("wA")) {
             imgflask.setImageResource(R.drawable.flame_test);
             btnDecision1.setText(R.string.yes);
@@ -921,6 +919,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -1040,7 +1039,7 @@ public class Decision extends AppCompatActivity {
                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 1 M NaHCO<small><sub>3</sub></small> dropwise until neutral. Discard any precipitate/solids.", 0));
                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            Decision.this.imgflask.setImageResource(R.drawable.general_tube);
+                            imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                             Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                             Decision.this.btnDecision1.setText(R.string.step_take_2d_add_6mhci);
                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -1136,7 +1135,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
-                                                    Decision.this.imgflask.setImageResource(R.drawable.drop_sol_sample);
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -1365,6 +1364,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -1594,6 +1594,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -1828,6 +1829,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -2107,7 +2109,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
-                                                    Decision.this.imgflask.setImageResource(R.drawable.general_tube);
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -2324,6 +2326,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -2682,6 +2685,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -3019,6 +3023,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -3117,6 +3122,7 @@ public class Decision extends AppCompatActivity {
                                                                                                                                             Decision.this.btnDecision3.setVisibility(View.GONE);
                                                                                                                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                                                                                                                 public void onClick(View v) {
+                                                                                                                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                                                                                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                                                                                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 2 drops of 6 M CH<small><sub>3</sub></small>COOH to make it slightly acidic.", 0));
                                                                                                                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -3305,6 +3311,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -3531,7 +3538,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
-                                                    Decision.this.imgflask.setImageResource(R.drawable.general_tube);
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -3540,6 +3547,7 @@ public class Decision extends AppCompatActivity {
                                                             Decision.this.startActivity(Decision.this.toloading);
                                                             handler.postDelayed(new Runnable() {
                                                                 public void run() {
+                                                                    imgflask.setImageResource(R.drawable.general_tube);
                                                                     Decision.this.txtQuestion.setText(R.string.cent_or_res);
                                                                     Decision.this.btnDecision1.setText(R.string.residue);
                                                                     Decision.this.btnDecision2.setVisibility(View.VISIBLE);
@@ -3618,6 +3626,7 @@ public class Decision extends AppCompatActivity {
                                                                                                                                             Decision.this.btnDecision3.setVisibility(View.GONE);
                                                                                                                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                                                                                                                 public void onClick(View v) {
+                                                                                                                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                                                                                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                                                                                                                     Decision.this.btnDecision1.setText(R.string.add_2d_6m_acetic);
                                                                                                                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -3764,7 +3773,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
-                                                    Decision.this.imgflask.setImageResource(R.drawable.general_tube);
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -3773,6 +3782,7 @@ public class Decision extends AppCompatActivity {
                                                             Decision.this.startActivity(Decision.this.toloading);
                                                             handler.postDelayed(new Runnable() {
                                                                 public void run() {
+                                                                    imgflask.setImageResource(R.drawable.general_tube);
                                                                     Decision.this.txtQuestion.setText(R.string.cent_or_res);
                                                                     Decision.this.btnDecision1.setText(R.string.residue);
                                                                     Decision.this.btnDecision2.setVisibility(View.VISIBLE);
@@ -3862,7 +3872,7 @@ public class Decision extends AppCompatActivity {
                                                                                                                                             Decision.this.btnDecision3.setVisibility(View.GONE);
                                                                                                                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                                                                                                                 public void onClick(View v) {
-                                                                                                                                                    Decision.this.imgflask.setImageResource(R.drawable.general_tube);
+                                                                                                                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                                                                                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                                                                                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 2 drops of 6 M CH<small><sub>3</sub></small>COOH to make it slightly acidic.", 0));
                                                                                                                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -3924,6 +3934,7 @@ public class Decision extends AppCompatActivity {
                                                                                                                                                                                                                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Place 3 drops of the centrifugate then add 6 M NH<small><sub>3</sub></small> until neutral.", 0));
                                                                                                                                                                                                                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                                                                                                                                                                                                                         public void onClick(View v) {
+                                                                                                                                                                                                                                                            imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                                                                                                                                                                                                                             Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                                                                                                                                                                                                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 2 drops of 6 M CH<small><sub>3</sub></small>COOH to make it slightly acidic.", 0));
                                                                                                                                                                                                                                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -4107,6 +4118,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -4205,6 +4217,7 @@ public class Decision extends AppCompatActivity {
                                                                                                                                             Decision.this.btnDecision3.setVisibility(View.GONE);
                                                                                                                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                                                                                                                 public void onClick(View v) {
+                                                                                                                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                                                                                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                                                                                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 2 drops of 6 M CH<small><sub>3</sub></small>COOH to make it slightly acidic.", 0));
                                                                                                                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -4267,7 +4280,7 @@ public class Decision extends AppCompatActivity {
                                                                                                                                                                                                                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Place 3 drops of the centrifugate then add 6 M NH<small><sub>3</sub></small> until neutral.", 0));
                                                                                                                                                                                                                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                                                                                                                                                                                                                         public void onClick(View v) {
-                                                                                                                                                                                                                                                            Decision.this.imgflask.setImageResource(R.drawable.general_tube);
+                                                                                                                                                                                                                                                            imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                                                                                                                                                                                                                             Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                                                                                                                                                                                                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 5 drops of 0.2 M Na<small><sub>2</sub></small>S.", 0));
                                                                                                                                                                                                                                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -4444,6 +4457,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -4542,6 +4556,7 @@ public class Decision extends AppCompatActivity {
                                                                                                                                             Decision.this.btnDecision3.setVisibility(View.GONE);
                                                                                                                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                                                                                                                 public void onClick(View v) {
+                                                                                                                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                                                                                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                                                                                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 2 drops of 6 M CH<small><sub>3</sub></small>COOH to make it slightly acidic.", 0));
                                                                                                                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -4760,6 +4775,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -4941,6 +4957,7 @@ public class Decision extends AppCompatActivity {
                                             Decision.this.btnDecision1.setText(Html.fromHtml("Add 6 M NH<small><sub>3</sub></small> dropwise until the solution is neutral.", 0));
                                             Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
                                                 public void onClick(View v) {
+                                                    imgflask.setImageResource(R.drawable.lp_redtored_blueto_blue);
                                                     Decision.this.txtQuestion.setText(R.string.lp_stay_red_stay_blue);
                                                     Decision.this.btnDecision1.setText(Html.fromHtml("Add 12 drops of 6 M NH<small><sub>3</sub></small> using a Pasteur pipet and Centrifuge.", 0));
                                                     Decision.this.btnDecision1.setOnClickListener(new View.OnClickListener() {
@@ -5127,6 +5144,9 @@ public class Decision extends AppCompatActivity {
     }
 
     public void startTimer() {
+
+        mEndTime = System.currentTimeMillis() + timeleftmillis;
+
         countDownTimer = new CountDownTimer(timeleftmillis,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -5137,8 +5157,6 @@ public class Decision extends AppCompatActivity {
             @Override
             public void onFinish() {
                 mTimerRunning = false;
-                Intent intent = new Intent(Decision.this, LoadingScreen.class);
-                startActivity(intent);
                 resetTimer();
             }
         }.start();
@@ -5152,10 +5170,17 @@ public class Decision extends AppCompatActivity {
 
         String timeleftformatted =  String.format(Locale.getDefault(),"%02d:%02d",minutes,seconds);
         timertext.setText(timeleftformatted);
+
+        if (timeleftmillis < 10000) {
+            timertext.setTextColor(Color.RED);
+        } else {
+            //Do Nothing - Color at default
+        }
     }
 
     public void resetTimer(){
         timeleftmillis = START_TIME_MILLIS;
         updateCountDownTimer();
+        mTimerRunning=false;
     }
 }

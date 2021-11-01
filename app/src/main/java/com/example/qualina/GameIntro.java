@@ -4,6 +4,7 @@ package com.example.qualina;
 import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
@@ -31,6 +32,7 @@ public class GameIntro extends AppCompatActivity {
     ImageView img_cat;
     String playerName, extra;
     Button btnstart;
+    SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,10 @@ public class GameIntro extends AppCompatActivity {
         setContentView(R.layout.activity_game_intro);
         bindViews();
         setSupportActionBar(toolbar);
+
+        this.preferences = getSharedPreferences("ScoreCation", 0);
+        SharedPreferences.Editor editor = this.preferences.edit();
+        editor.clear().apply();
 
         Toast.makeText(this, "Please press ENTER after name input to proceed.", Toast.LENGTH_LONG).show();
 
