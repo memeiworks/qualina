@@ -1,6 +1,7 @@
 package com.example.qualina;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ public class AnswerResult extends AppCompatActivity {
     String player, result;
     int points_acquired;
     TextView txtplayer,txtscore;
+    MediaPlayer correctsnd, wrongsnd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +39,16 @@ public class AnswerResult extends AppCompatActivity {
         this.cation_step = getIntent().getStringExtra("Cation Step");
         this.points_acquired = getIntent().getIntExtra("Score", 0);
         this.txtplayer.setText(this.player);
+
+        correctsnd = MediaPlayer.create(AnswerResult.this,R.raw.sndright);
+        wrongsnd = MediaPlayer.create(AnswerResult.this,R.raw.sndwrong);
+
         TextView textView = this.txtscore;
         textView.setText("SCORE: " + this.current_score + "/15");
         if (this.result.equals("Incorrect")) {
             if (this.cation_step.equals("First")) {
                 getHTMLCation(this.current_cation);
+                wrongsnd.start();
                 this.lblAnswer.setText("You were unable to catch your cation.");
                 this.imgresult.setImageResource(R.drawable.wrong_guess);
                 this.btndefault.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +66,7 @@ public class AnswerResult extends AppCompatActivity {
                 });
             } else if (this.cation_step.equals("Second")) {
                 getHTMLCation(this.current_cation);
+                wrongsnd.start();
                 this.lblAnswer.setText("You were unable to catch your cation.");
                 this.imgresult.setImageResource(R.drawable.wrong_guess);
                 this.btndefault.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +86,7 @@ public class AnswerResult extends AppCompatActivity {
                 Toast.makeText(this, "Something went wrong. Please try again.", Toast.LENGTH_SHORT).show();
             } else if (this.current_score == 0) {
                 getHTMLCation(this.current_cation);
+                wrongsnd.start();
                 this.lblAnswer.setText("You were unable to catch ALL of your cations.");
                 this.imgresult.setImageResource(R.drawable.all_wrong_guess);
                 this.btndefault.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +104,7 @@ public class AnswerResult extends AppCompatActivity {
                 });
             } else {
                 getHTMLCation(this.current_cation);
+                wrongsnd.start();
                 this.lblAnswer.setText("You were unable to catch your cation.");
                 this.imgresult.setImageResource(R.drawable.wrong_guess);
                 this.btndefault.setOnClickListener(new View.OnClickListener() {
@@ -113,6 +123,7 @@ public class AnswerResult extends AppCompatActivity {
             }
         } else if (this.result.equals("Correct")) {
             int i = this.points_acquired;
+            correctsnd.start();
             if (i == 1) {
                 this.lblAnswer.setText("You have been rewarded 1 point!");
             } else if (i == 3) {
@@ -210,5 +221,12 @@ public class AnswerResult extends AppCompatActivity {
 
     public void onBackPressed() {
         Toast.makeText(this, "OOPS! No cheating!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        correctsnd.release();
+        wrongsnd.release();
     }
 }
