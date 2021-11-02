@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/cat_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.Qualina">
-        <activity android:name=".CountdownSummary"></activity>
+        <activity android:name=".CountdownSummary" />
         <activity android:name=".CationGroupViewer" />
         <activity android:name=".CationsGroupPDF" />
         <activity android:name=".Closing" />

@@ -26,13 +26,6 @@ public class Decision extends AppCompatActivity {
     TextView player_name, score;
     Intent toNotable, toResult, toloading;
     TextView txtCations, txtQuestion;
-    TextView timertext;
-
-    private CountDownTimer countDownTimer;
-    private boolean mTimerRunning;
-    private static final long START_TIME_MILLIS = 200000;
-    private long timeleftmillis = START_TIME_MILLIS;
-    private long mEndTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +45,6 @@ public class Decision extends AppCompatActivity {
         cation_step = getIntent().getStringExtra("Cation Step");
         score.setText("SCORE: " + current_score + "/15");
         player_name.setText(player);
-
-        timertext.setVisibility(View.VISIBLE);
-        startTimer();
 
         if (this.cation_step.equals("First")) {
             getCationIndex(cation1);
@@ -76,7 +66,6 @@ public class Decision extends AppCompatActivity {
         player_name = findViewById(R.id.tb_player);
         score = findViewById(R.id.tb_score);
         imgflask = findViewById(R.id.imgflask);
-        timertext = findViewById(R.id.timertext);
     }
 
     public void getCationIndex(final String index)  {
@@ -5141,46 +5130,5 @@ public class Decision extends AppCompatActivity {
                 });
             }
         });
-    }
-
-    public void startTimer() {
-
-        mEndTime = System.currentTimeMillis() + timeleftmillis;
-
-        countDownTimer = new CountDownTimer(timeleftmillis,1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                timeleftmillis = millisUntilFinished;
-                updateCountDownTimer();
-            }
-
-            @Override
-            public void onFinish() {
-                mTimerRunning = false;
-                resetTimer();
-            }
-        }.start();
-
-        mTimerRunning = true;
-    }
-
-    public void updateCountDownTimer(){
-        int minutes = (int) (timeleftmillis/1000) / 60;
-        int seconds = (int) (timeleftmillis/1000) % 60;
-
-        String timeleftformatted =  String.format(Locale.getDefault(),"%02d:%02d",minutes,seconds);
-        timertext.setText(timeleftformatted);
-
-        if (timeleftmillis < 10000) {
-            timertext.setTextColor(Color.RED);
-        } else {
-            //Do Nothing - Color at default
-        }
-    }
-
-    public void resetTimer(){
-        timeleftmillis = START_TIME_MILLIS;
-        updateCountDownTimer();
-        mTimerRunning=false;
     }
 }
